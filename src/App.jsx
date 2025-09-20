@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { Toaster } from '@/components/ui/toaster';
+import PixelTracker from './PixelTracker';
 import LandingPage from '@/pages/LandingPage';
 import IdentificationPage from '@/pages/IdentificationPage';
 import CouponValidationPage from '@/pages/CouponValidationPage';
@@ -22,6 +23,7 @@ function App() {
       </Helmet>
       
       <Router>
+        <PixelTracker />
         <div className="mobile-container">
           <Routes>
             <Route path="/" element={<LandingPage />} />
