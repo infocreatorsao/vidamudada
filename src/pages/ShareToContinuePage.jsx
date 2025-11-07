@@ -44,12 +44,12 @@ const ShareToContinuePage = () => {
         const messengerUrl = `fb-messenger://share/?link=${encodeURIComponent(
           baseLink
         )}&app_id=123456789&text=${encoded}`;
-        const fallbackUrl = `https://www.facebook.com/dialog/send?app_id=123456789&link=${encodeURIComponent(
+        const shareDialogUrl = `https://www.facebook.com/dialog/share?app_id=123456789&display=popup&href=${encodeURIComponent(
           baseLink
-        )}&redirect_uri=${encodeURIComponent(baseLink)}&quote=${encoded}`;
+        )}&quote=${encoded}&redirect_uri=${encodeURIComponent(baseLink)}`;
 
         const newWindow = window.open(messengerUrl, '_blank', 'noopener');
-        if (!newWindow) window.open(fallbackUrl, '_blank', 'noopener');
+        if (!newWindow) window.open(shareDialogUrl, '_blank', 'noopener');
       }
 
       setShareCount(() => REQUIRED_CLICKS);
