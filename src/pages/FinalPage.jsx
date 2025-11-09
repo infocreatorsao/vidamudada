@@ -22,7 +22,7 @@ const FinalPage = () => {
   }, []);
 
   const handleWithdrawNow = () => {
-    navigate('/share-to-continue');
+    navigate('/checkout');
   };
 
   return (
