@@ -27,7 +27,7 @@ const ShareToContinuePage = () => {
 
   const shareMessage = useMemo(
     () =>
-      'É real! Acabei de clicar e ganhei um bônus em dinheiro! É super fácil e recomendo muito que você experimente! Não perca! https://suavez.onrender.com/',
+      'É real! Acabei de clicar e ganhei um bônus em dinheiro! É super fácil e recomendo muito que você experimente! Não perca! https://milionariorapido.onrender.com',
     []
   );
 
@@ -40,7 +40,7 @@ const ShareToContinuePage = () => {
       }
 
       if (platform === 'messenger') {
-        const baseLink = 'https://suavez.onrender.com/';
+        const baseLink = 'https://milionariorapido.onrender.com';
         const messengerUrl = `fb-messenger://share/?link=${encodeURIComponent(
           baseLink
         )}&app_id=123456789&text=${encoded}`;
@@ -66,12 +66,6 @@ const ShareToContinuePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  useEffect(() => {
-    if (shareCount >= REQUIRED_CLICKS) {
-      navigate('/checkout');
-    }
-  }, [navigate, shareCount]);
 
   return (
     <div className="min-h-screen bg-white flex flex-col">

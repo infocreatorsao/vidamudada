@@ -11,7 +11,6 @@ import WithdrawalMethodPage from '@/pages/WithdrawalMethodPage';
 import SecurityConfirmationPage from '@/pages/SecurityConfirmationPage';
 import FinalPage from '@/pages/FinalPage';
 import CheckoutPage from '@/pages/CheckoutPage';
-import ShareToContinuePage from '@/pages/ShareToContinuePage';
 
 function App() {
   return (
@@ -34,7 +33,6 @@ function App() {
             <Route path="/metodo-saque" element={<WithdrawalMethodPage />} />
             <Route path="/confirmacao-seguranca" element={<SecurityConfirmationPage />} />
             <Route path="/final" element={<FinalPage />} />
-            <Route path="/share-to-continue" element={<ShareToContinuePage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
           </Routes>
         </div>
